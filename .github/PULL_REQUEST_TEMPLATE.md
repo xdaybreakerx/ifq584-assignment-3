@@ -6,10 +6,6 @@ Briefly describe what you changed and why.
 
 Describe how you manually verified the change works.
 
-## Related Issue
-
-Closes #
-
 ## Checklist
 
 - [ ] `dotnet build` completes successfully
