@@ -1,3 +1,4 @@
+using System;
 namespace BoardGameFramework;
 
 // Piece abstract class
@@ -11,15 +12,41 @@ public abstract class Piece
 
 
 // NumberPiece inherits from Piece
-
+public class NumberPiece : Piece
+{
 // store the number as an integer
+    private readonly int _value;
+
+    public NumberPiece(int value)
+    {
+        _value = value;
+    }
+
+    public int Value
+    {
+        get
+        {
+            return _value;
+        }
+    }
 
 // when display value is requested
     // convert the number to text
     // return the text
+    public override string DisplayValue()
+    {
+        string displayedNumber = _value.ToString();
 
-// when checking if the piece is reusable
-    // return false
+        return displayedNumber;
+    }
+
+    // when checking if the piece is reusable
+        // return false
+    public override bool IsReusable()
+    {
+        return false;
+    }
+}
 
 
 // MarkPiece inherits from Piece
@@ -32,6 +59,7 @@ public abstract class Piece
 
 // when display value is requested
     // return the symbol
+
 
 // when checking if the piece is reusable
     // return true
