@@ -1,6 +1,6 @@
 using System;
 
-namespace BoardGameFramework;
+namespace MultiGameApp; 
 
 public abstract class Piece
 {
