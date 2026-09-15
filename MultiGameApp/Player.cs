@@ -1,3 +1,7 @@
+namespace MultiGameApp; 
+
+using System.Collections.Generic;
+
 // Player abstract class
 // store the player id as an integer
 // store the player name as text
