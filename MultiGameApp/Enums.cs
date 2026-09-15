@@ -1,4 +1,4 @@
-namespace BoardGameFramework;
+namespace MultiGameApp; 
 
 public enum GameType
 {
