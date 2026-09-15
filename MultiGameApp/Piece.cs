@@ -1,7 +1,13 @@
-// Piece abstract class
+namespace BoardGameFramework;
 
-// require every piece to provide a display value
-// require every piece to state whether it can be reused
+// Piece abstract class
+public abstract class Piece
+{
+    // require every piece to provide a display value
+    public abstract string DisplayValue();
+    // require every piece to state whether it can be reused
+    public abstract bool IsReusable();
+}
 
 
 // NumberPiece inherits from Piece
