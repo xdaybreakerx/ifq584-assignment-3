@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Data.Common;
 
 namespace MultiGameApp;
 
@@ -104,7 +105,6 @@ public class HumanPlayer : Player
 
 public class ComputerPlayer : Player
 {
-
     // ComputerPlayer inherits from Player
     // inherit the player id, name, and available pieces
     // store a move-selection strategy
@@ -112,7 +112,15 @@ public class ComputerPlayer : Player
     // when a ComputerPlayer is created with an id, name, pieces, and strategy
     // initialise the inherited player state
     // store the supplied strategy
+    public ComputerPlayer(int id, string name, List<Piece> availablePieces)
+        // TODO Move Strategy
+        : base(id, name, availablePieces)
+    {
+        // todo move strategy
+    }
 
+    // TO DO
+    // move function
     // when choosing a move for a game
     // ask the strategy to choose a move for this player from the supplied game
     // the strategy prefers an immediate winning move and otherwise selects a random valid move
@@ -120,4 +128,8 @@ public class ComputerPlayer : Player
 
     // when checking whether the computer player is computer controlled
     // return true
+    public override bool IsComputer()
+    {
+        return true;
+    }
 }
