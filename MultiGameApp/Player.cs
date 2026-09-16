@@ -91,9 +91,15 @@ public class HumanPlayer : Player
 {
     // HumanPlayer inherits from Player
     // inherit the player id, name, and available pieces
+    public HumanPlayer(int id, string name, List<Piece> availablePieces)
+        : base(id, name, availablePieces) { }
 
     // when checking whether the human player is computer controlled
     // return false
+    public override bool IsComputer()
+    {
+        return false;
+    }
 }
 
 public class ComputerPlayer : Player
